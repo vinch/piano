@@ -1,0 +1,144 @@
+* {
+	margin: 0;
+  padding: 0;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+input::-webkit-input-placeholder {
+   color: #999;
+}
+input:-moz-placeholder {  
+   color: #999;  
+}
+
+body, input, button {
+  font-family: "Helvetica", sans-serif;
+}
+
+#container {
+  width: 490px;
+  margin: 0 auto;
+}
+
+#piano {
+  width: 490px;
+  height: 320px;
+  margin-bottom: 50px;
+}
+
+.white_key {
+  width: 70px;
+  height: 320px;
+  float: left;
+  border-left: 1px solid #333;
+  border-bottom: 1px solid #333;
+  padding-top: 250px;
+  cursor: pointer;
+  line-height: 70px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: #999;
+  background: #fff;
+  text-transform: uppercase;
+  -webkit-transition: background-color 100ms linear;
+  -moz-transition: background-color 100ms linear;
+  -o-transition: background-color 100ms linear;
+  -ms-transition: background-color 100ms linear;
+  transition: background-color 100ms linear;
+}
+.white_key:last-child {
+  border-right: 1px solid #333;
+}
+.white_key:hover {
+  color: #333;
+  background: #f7f7f7;
+}
+.white_key.active {
+  background: #aaa;
+}
+
+.black_key {
+  width: 45px;
+  height: 200px;
+  float: left;
+  margin-left: -45px;
+  position: relative;
+  left: 23px;
+  background: #333;
+}
+
+#console {
+  position: relative;
+  margin-bottom: 50px;
+}
+#console .content {
+  color: #eee;
+  background: #333;
+  width: 100%;
+  min-height: 100px;
+  padding: 10px;
+  word-wrap: break-word;
+  font-family: "Monaco", monospace;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+#console a {
+  position: absolute;
+  display: none;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  border: 1px solid #eee;
+  border-top: 0;
+  border-right: 0;
+  background: #333;
+  font-family: "Helvetica", sans-serif;
+  color: #eee;
+  text-decoration: none;
+}
+#console:hover a {
+  display: block;
+}
+#console a:hover {
+  background: #666;
+}
+
+#player {
+  overflow: hidden;
+  margin-bottom: 100px;
+}
+#player input {
+  width: 425px;
+  height: 50px;
+  display: block;
+  float: left;
+  padding-left: 10px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 20px;
+  text-transform: uppercase;
+  background: #f7f7f7;
+  color: #333;
+}
+#player input:focus {
+  background: #fff;
+}
+#player button {
+  width: 50px;
+  height: 50px;
+  display: block;
+  float: right;
+  border: 0;
+  font-size: 20px;
+  background: #333;
+  color: #eee;
+}
+#player button:hover:not([disabled]) {
+  cursor: pointer;
+  background: #666;
+}
+#player input[disabled], #player button[disabled] {
+  opacity: 0.5;
+}

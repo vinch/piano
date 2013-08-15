@@ -142,3 +142,10 @@ body, input, button {
 #player input[disabled], #player button[disabled] {
   opacity: 0.5;
 }
+#player p {
+  clear: both;
+  padding-top: 10px;
+  color: #666;
+  font-size: 12px;
+  line-height: : 1.4em;
+}
